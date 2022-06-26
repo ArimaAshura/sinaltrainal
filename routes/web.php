@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+/**
+ * VIEWS DEL CONTROLADOR ServiciosPublicosController
+ */
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [ArticleController::class, 'index']);
+});
