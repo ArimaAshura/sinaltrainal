@@ -10,4 +10,9 @@ class ArticleController extends Controller
     {
         return view('Articulos.inicio');
     }
+
+    public function create()
+    {
+        return view('Articulos.agregarArticulo');
+    }
 }

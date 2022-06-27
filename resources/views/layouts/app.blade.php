@@ -23,7 +23,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm menuSinaltrainal">
             <div class="container">
                 <img src="{{ asset('assets/img/logo.png') }}" class="logoSinaltrainal">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -38,7 +38,7 @@
                     <ul class="navbar-nav me-auto">
 
                         @if (Auth::check())
-                        <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="{{ url('/home') }}">Inicio</a>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Articulo
@@ -50,6 +50,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="#">Actualizar</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/agregarArticulo') }}">Agregar</a></li>
                             </ul>
                         </li>
                         @endif
@@ -60,7 +61,7 @@
                         @if (Auth::check())
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <button class="btn btn-outline-danger" type="submit">Buscar</button>
+                            <button class="btn btn-danger" type="submit">Buscar</button>
                         </form>
                         @endif
 

@@ -16,7 +16,7 @@ use App\Http\Controllers\ArticleController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -29,4 +29,5 @@ Auth::routes();
  */
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [ArticleController::class, 'index']);
+    Route::get('/agregarArticulo', [ArticleController::class, 'create']);
 });

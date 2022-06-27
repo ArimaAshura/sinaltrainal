@@ -1,4 +1,4 @@
-.logoSinaltrainal{
+.logoSinaltrainal {
     background-image: url(/img/logo-sinaltrainal.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -6,4 +6,9 @@
     width: 4em;
     height: 4em;
     margin-right: 0.5em;
+}
+
+.menuSinaltrainal {
+    background-color: black;
+    color: white;
 }
