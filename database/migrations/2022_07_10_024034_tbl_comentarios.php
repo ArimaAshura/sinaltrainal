@@ -17,6 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('comentario');
             $table->string('autor');
+            $table->unsignedBigInteger('tblArticulo_id');
+            $table->foreign('tblArticulo_id')
+                ->references('id')
+                ->on('tblArticulos');
             $table->timestamps();
         });
     }
