@@ -13,7 +13,10 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return view('Articulos.inicio');
+        $articulos = [];
+        $articulos['articulo'] = articulos::paginate(5);
+        dd($articulos);
+        return view('Articulos.inicio', $articulos);
     }
 
 

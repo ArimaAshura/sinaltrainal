@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('archivo');
             $table->boolean('estado_articulo')->default(true);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
