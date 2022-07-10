@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $articulo->titulo }}</h5>
                     <p class="card-text">{{ $articulo->articulo_constitucional }}</p>
-                    <a href="{{ $articulo->id }}" class="btn btn-primary">Abrir este articulo</a>
+                    <a href="{{ $articulo->id }}" class="btn btn-danger">Abrir este articulo</a>
                 </div>
             </div>
         </div>
@@ -24,3 +24,5 @@
     </div>
 </div>
 @endsection
+
+
