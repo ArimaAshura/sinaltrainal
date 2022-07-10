@@ -14,8 +14,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articulos = [];
-        $articulos['articulo'] = articulos::paginate(5);
-        dd($articulos);
+        $articulos['articulos'] = articulos::paginate(6);
         return view('Articulos.inicio', $articulos);
     }
 
@@ -70,7 +69,7 @@ class ArticleController extends Controller
 
             articulos::insert($fields);
 
-
+            // redirect('/home');
             // dd($request->all());
         } else {
             return view('Articulos.inicio');
