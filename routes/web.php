@@ -30,4 +30,10 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [ArticleController::class, 'index']);
     Route::get('/agregarArticulo', [ArticleController::class, 'create']);
+
+
+    /**
+     * rutas para envio de datos a la base de datos
+     */
+    Route::post('/agregarArticulo/insert', [ArticleController::class, 'store']);
 });

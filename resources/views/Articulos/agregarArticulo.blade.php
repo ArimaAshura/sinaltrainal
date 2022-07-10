@@ -1,34 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row text-center">
-        <div class="col-12 col-sm-1 col-md-2 col-lg-3 col-xl-2"></div>
-        <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-8 shadow-sm border p-2">
-            <h2 class="text-center">Agregar Articulo Nuevo</h2>
-            <form action="" method="post">
-                @csrf
-                <div class="row">
-                    <div class="col-lg-3 col-xl-3 m-2">
-                        <input type="text" name="Titulo" id="Titulo" class="form form-control" placeholder="Agrega Titulo">
-                    </div>
-                    <div class="col-lg-3 col-xl-3 m-2">
-                        <input type="text" name="Subtitulo" id="Subtitulo" class="form form-control" placeholder="Agrega Subtitulo">
-                    </div>
-                    <div class="col-lg-3 col-xl-3 m-2">
-                        <input type="text" name="ArticuloConstitucional" id="ArticuloConstitucional" class="form form-control" placeholder="Agrega Articulo Constitucional">
-                    </div>
-                    <div class="col-lg-3 col-xl-3 m-2">
-                        <input type="text" name="Autor" id="Autor" class="form form-control" placeholder="Agrega Autor" value="{{ Auth::user()->name }}" readonly>
-                    </div>
-                    <div class="col-lg-3 col-xl-3 m-2">
-                        <input type="file" name="img" id="img" class="form form-control" placeholder="Agregar Imagen">
-                    </div>
-                    <div class="col-lg-3 col-xl-3 m-2"></div>
-                </div>
-            </form>
+<div class="container">
+    <h2 class="text-center">Agregar Articulo Nuevo</h2>
+    <form action="{{ url('/agregarArticulo/insert') }}" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="row shadow-sm border p-2">
+            <div class="col-md-4 col-lg-3 col-xl-3 py-4">
+                <input type="text" name="Titulo" id="Titulo" class="form form-control" placeholder="Agrega Titulo">
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 py-4">
+                <input type="text" name="Subtitulo" id="Subtitulo" class="form form-control" placeholder="Agrega Subtitulo">
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 py-4">
+                <input type="text" name="ArticuloConstitucional" id="ArticuloConstitucional" class="form form-control" placeholder="Agrega Articulo Constitucional">
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 py-4">
+                <input type="text" name="Autor" id="Autor" class="form form-control" placeholder="Agrega Autor" value="{{ Auth::user()->name }}" readonly>
+            </div>
+            <div class="col-md-4 col-lg-12 col-xl-12 py-4">
+                <input type="file" name="imagenArticulo" id="imagenArticulo" class="form form-control" placeholder="Agregar Imagen">
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-12 py-4">
+                <textarea name="Descripcion" id="Descripcion" class="form form-control" placeholder="Agrega Descripcion"></textarea>
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-12 py-4">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
         </div>
-        <div class="col-12 col-sm-1 col-md-2 col-lg-3 col-xl-2"></div>
-    </div>
+    </form>
+</div>
 </div>
 @endsection

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('cuerpo_articulo');
             $table->string('imagen');
             $table->string('archivo');
-            $table->string('estado_articulo');
+            $table->boolean('estado_articulo')->default(true);
             $table->timestamps();
         });
     }

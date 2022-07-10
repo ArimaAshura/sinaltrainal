@@ -6,17 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-/**
- * Modelo para la tabla de articulos
- * @author Cristian Aguirre y Frank Mateo Ospina
- * @version 1.0
- */
-class articulos extends Model
+class comentarios extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
 
 
     /**
@@ -24,19 +17,15 @@ class articulos extends Model
      * @var array
      */
     protected $fields = [
-        'titulo',
-        'subtitulo',
+        'comentario',
         'autor',
-        'articulo_constitucional',
-        'cuerpo_articulo',
-        'imagen',
-        'archivo'
+        'tbl_articulos_id'
     ];
 
 
     /**
-     * tabla para agregar los articulos
+     * tabla para agregar los comentarios
      * @var string
      */
-    protected $table = 'tbl_articulos';
+    protected $table = 'tbl_comentarios';
 }
