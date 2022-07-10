@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tblArticulos', function (Blueprint $table) {
+        Schema::create('tbl_articulos', function (Blueprint $table) {
             $table->id();
-            $table->string('Titulo');
-            $table->string('Subtitulo');
-            $table->string('Autor');
-            $table->string('ArticuloConstitucional');
-            $table->string('cuerpoArticulo');
-            $table->string('Imagen');
-            $table->string('Archivo');
-            $table->string('Estado');
+            $table->string('titulo');
+            $table->string('subtitulo');
+            $table->string('autor');
+            $table->string('articulo_constitucional');
+            $table->string('cuerpo_articulo');
+            $table->string('imagen');
+            $table->string('archivo');
+            $table->string('estado_articulo');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tblArticulos');
+        Schema::dropIfExists('tbl_articulos');
     }
 };
