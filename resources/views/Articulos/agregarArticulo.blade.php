@@ -21,6 +21,9 @@
                     <div class="col-lg-3 col-xl-3 m-2">
                         <input type="text" name="Autor" id="Autor" class="form form-control" placeholder="Agrega Autor" value="{{ Auth::user()->name }}" readonly>
                     </div>
+                    <div class="col-lg-3 col-xl-3 m-2">
+                        <input type="file" name="img" id="img" class="form form-control" placeholder="Agregar Imagen">
+                    </div>
                     <div class="col-lg-3 col-xl-3 m-2"></div>
                 </div>
             </form>
